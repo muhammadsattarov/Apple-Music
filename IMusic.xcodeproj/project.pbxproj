@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CE91EF912D86000600F59AAD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE91EF902D86000600F59AAD /* Alamofire */; };
+		CE91EF942D860F3200F59AAD /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CE91EF932D860F3200F59AAD /* SDWebImage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		CE91EF602D85F12A00F59AAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE91EF942D860F3200F59AAD /* SDWebImage in Frameworks */,
+				CE91EF912D86000600F59AAD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +98,7 @@
 				CE91EF4B2D85F12800F59AAD /* IMusic */,
 				CE91EF622D85F12A00F59AAD /* IMusicTests */,
 				CE91EF6C2D85F12A00F59AAD /* IMusicUITests */,
+				CE91EF8F2D86000600F59AAD /* Frameworks */,
 				CE91EF4A2D85F12800F59AAD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +111,13 @@
 				CE91EF692D85F12A00F59AAD /* IMusicUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CE91EF8F2D86000600F59AAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +140,8 @@
 			);
 			name = IMusic;
 			packageProductDependencies = (
+				CE91EF902D86000600F59AAD /* Alamofire */,
+				CE91EF932D860F3200F59AAD /* SDWebImage */,
 			);
 			productName = IMusic;
 			productReference = CE91EF492D85F12800F59AAD /* IMusic.app */;
@@ -208,6 +225,10 @@
 			);
 			mainGroup = CE91EF402D85F12800F59AAD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CE91EF8E2D85FF1200F59AAD /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CE91EF922D860F2000F59AAD /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CE91EF4A2D85F12800F59AAD /* Products */;
 			projectDirPath = "";
@@ -289,13 +310,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2YLM52WVWU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IMusic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.8;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,13 +338,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2YLM52WVWU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IMusic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.8;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -563,6 +586,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE91EF8E2D85FF1200F59AAD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		CE91EF922D860F2000F59AAD /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE91EF902D86000600F59AAD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE91EF8E2D85FF1200F59AAD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CE91EF932D860F3200F59AAD /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE91EF922D860F2000F59AAD /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE91EF412D85F12800F59AAD /* Project object */;
 }

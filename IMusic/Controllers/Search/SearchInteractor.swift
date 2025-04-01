@@ -1,10 +1,5 @@
-//
-//  SearchInteractor.swift
-//  IMusic
-//
-//  Created by user on 16/03/25.
-//  Copyright (c) 2025 ___ORGANIZATIONNAME___. All rights reserved.
-//
+
+
 
 import UIKit
 
@@ -20,6 +15,15 @@ class SearchInteractor: SearchBusinessLogic {
   func makeRequest(request: Search.Model.Request.RequestType) {
     if service == nil {
       service = SearchService()
+    }
+
+    switch request {
+    case .getTracks(let searchText):
+      print("Interactor .getTracks")
+      presenter?.presentData(response: .presentFooterView)
+      service?.fetchTracks(searchText, completion: { [weak self] tracks in
+        self?.presenter?.presentData(response: .presentPtacks(tracks))
+      })
     }
   }
   

@@ -1,8 +1,16 @@
-//
-//  CMTime+Extension.swift
-//  IMusic
-//
-//  Created by user on 20/03/25.
-//
+
 
 import Foundation
+import AVKit
+
+extension CMTime {
+
+  func toDisplayString() -> String {
+    guard !CMTimeGetSeconds(self).isNaN else { return "" }
+    let totalSecond = Int(CMTimeGetSeconds(self))
+    let seconds = totalSecond % 60
+    let minuts = totalSecond / 60
+    let timeFormatString = String(format: "%02d:%02d", minuts, seconds)
+    return timeFormatString
+  }
+}
